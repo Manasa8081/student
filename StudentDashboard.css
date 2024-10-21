@@ -1,0 +1,54 @@
+/* Set the height for html, body, and root to ensure full height coverage */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+/* Full height for dashboard */
+.dashboard {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(145deg, #f0f9e8, #96c93d); /* Example background */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Ensure padding is included in height/width */
+}
+
+/* Dashboard sections styling */
+.dashboard-sections {
+    display: flex;
+    flex-wrap: wrap; /* Wrap sections to a new line */
+    justify-content: center; /* Center the sections */
+    width: 100%; /* Full width */
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px; /* Space between sections */
+    text-align: center; /* Center text */
+    width: calc(30% - 20px); /* Responsive width for sections */
+    min-width: 200px; /* Minimum width for smaller screens */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.section:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Section link styling */
+h2 a {
+    color: #007BFF; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+}
+
+h2 a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

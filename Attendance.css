@@ -1,0 +1,21 @@
+.attendance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #96c93d, #00b09b); /* Fresh green-blue gradient */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    color: #ffd700; /* Gold color for emphasis */
+  }
+  

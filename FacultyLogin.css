@@ -1,0 +1,171 @@
+/* FacultyLogin.css */
+
+/* General Styling for the Login Page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height */
+    width: 100%; /* Full width */
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient background */
+    font-family: 'Poppins', sans-serif; /* Font family */
+    padding: 20px;
+  }
+  
+  /* Container Styling */
+  .login-container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    transform: scale(0.95);
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+  
+  /* Heading Animation */
+  .animated-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #43e97b; /* Vibrant green */
+    animation: slideDown 0.7s ease-out;
+  }
+  
+  .sub-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+    animation: fadeInText 1s ease-out;
+  }
+  
+  /* Form Field Animations */
+  .animated-form .animated-field {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .animated-field:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .animated-field:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+  
+  /* Input Field Styling */
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f9e8; /* Light green background */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input:focus {
+    background-color: #e0f3d2;
+    box-shadow: 0 0 10px rgba(67, 233, 123, 0.5); /* Green glow */
+    outline: none;
+  }
+  
+  /* Button Styling */
+  .login-button {
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #43e97b;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #32c95c; /* Darker green */
+    transform: scale(1.05);
+  }
+  
+  /* Button Animation */
+  .animated-button {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.8s;
+  }
+  
+  .login-button:disabled {
+    background-color: #9de8b5;
+    cursor: not-allowed;
+  }
+  
+  /* Link Styling */
+  .link {
+    color: #43e97b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #32c95c;
+  }
+  
+  /* Form Options Fade-In */
+  .animated-options {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1s;
+  }
+  
+  .login-options p {
+    margin: 15px 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

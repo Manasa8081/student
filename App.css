@@ -1,0 +1,134 @@
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard h1 {
+  color: #2c3e50;
+}
+
+.dashboard-sections {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.section {
+  flex: 1 1 calc(30% - 20px); /* Responsive flexbox for sections */
+  border: 1px solid #ccc; /* Optional: border for visual separation */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 15px; /* Padding inside sections */
+ 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  min-width: 200px; /* Minimum width for sections */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.section h2 a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #7f8c8d;
+}
+
+.login-page {
+  display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    flex-direction: column;
+    background-image: url('./assets/stu.jpg'); /* Path to student background */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    width: 100vw; /* Full viewport width */
+}
+
+.login-page h2 {
+  margin-bottom: 20px;
+  /*color: #2c3e50;*/
+color: black;
+}
+
+.login-page input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  color: black;
+  background-color: #11101012;
+}
+
+.login-page button {
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-page button:hover {
+  background-color: #2980b9;
+}
+
+/* Ensure body and html take the full height */
+/* Ensure html and body take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Full-page background image */
+.user-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  flex-direction: column;
+  background-image: url('./assets/login.png'); /* Path to your background image */
+  background-size: cover; /* Ensures the background covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* No repeating */
+  width: 100vw; /* Full viewport width */
+}
+
+/* Styling for the title and buttons */
+.user-selection h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.user-selection button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: #000000 solid;
+  background-color: rgba(52, 152, 219, 0.8);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-selection button:hover {
+  background-color: rgba(41, 128, 185, 0.8);
+}

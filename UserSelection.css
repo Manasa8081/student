@@ -1,0 +1,181 @@
+/* Main container for the whole page */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://media.istockphoto.com/id/1480277406/photo/graduation-group-and-back-view-of-students-celebrate-education-success-behind-of-excited.jpg?s=612x612&w=0&k=20&c=KRfzU9eeBsUdCNUXQSIx4yf6O2PlMD9XvckFgx-hndc=');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add floating particles or shapes for visual effects */
+.main-container::before, .main-container::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    animation: floating 10s ease-in-out infinite;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.main-container::before {
+    top: 10%;
+    left: -150px;
+}
+
+.main-container::after {
+    bottom: 20%;
+    right: -150px;
+}
+
+/* Floating animation */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+}
+
+/* Title styling */
+.title {
+    margin-bottom: 40px;
+    text-align: center;
+    z-index: 2; /* Ensure the title is above the visual effects */
+}
+
+.title h1 {
+    color: black; /* Black color for the "Portal Access" title */
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 2; /* Ensure the text is on top */
+}
+
+/* The container for the faculty and student cards */
+.user-selection-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    z-index: 2; /* Ensure the cards are on top */
+}
+
+/* Common styles for both cards */
+.selection-card {
+    position: relative;
+    width: 280px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Ensure the cards are above visual effects */
+}
+
+/* Add subtle pulsing effect */
+.selection-card::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.selection-card .content {
+    z-index: 2;
+}
+
+.selection-card h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.login-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.faculty:hover, .student:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.faculty {
+    background: rgba(100, 100, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.student {
+    background: rgba(255, 100, 100, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* Scale effect on hover */
+.selection-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .user-selection-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
